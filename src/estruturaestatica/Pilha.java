@@ -1,0 +1,26 @@
+package estruturaestatica;
+
+public class Pilha<T> extends EstruturaEstatica<T>{
+	
+	public Pilha() {
+		super();
+	}
+	
+	public Pilha(int capacidade) {
+		super(capacidade);
+	}
+
+
+public void empilha(T elemento) {
+	//dessa forma estamos reutilizando o código da classe pai
+	super.adiciona(elemento);
+}
+public T topo() {
+	if(this.estaVazia()) {
+		return null;
+	}else {
+		return this.elementos[tamanho-1];
+	}
+}
+
+}
